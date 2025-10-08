@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 120 120">
+	<g id="primary-line">
+		<path fill="#242D3D" fill-rule="evenodd" d="M39 23v4h36v-4h2v4h9a2 2 0 012 1.85V67h-2V43H28v40h34v2H28a2 2 0 01-2-1.85V29a2 2 0 011.85-2H37v-4h2zm2 25a2 2 0 012 1.85V56a2 2 0 01-1.85 2H35a2 2 0 01-2-1.85V50a2 2 0 011.85-2H41zm0 2h-6v6h6v-6zm-4-21h-9v12h58V29h-9v4h-2v-4H39v4h-2v-4z" clip-rule="evenodd"/>
+	</g>
+	<g id="secondary-line">
+		<path fill="#4871D9" fill-rule="evenodd" d="M64 91h36V69H64v22zm36-24H64a2 2 0 00-2 2v22c0 1.1.9 2 2 2h36a2 2 0 002-2V69a2 2 0 00-2-2z" clip-rule="evenodd"/>
+	</g>
+	<g id="fill">
+		<path fill="#fff" fill-rule="evenodd" d="M66 78h32v-4H66v4z" clip-rule="evenodd"/>
+		<path fill="#4871D9" fill-opacity=".5" fill-rule="evenodd" d="M66 78h32v-4H66v4z" clip-rule="evenodd"/>
+	</g>
+</svg>

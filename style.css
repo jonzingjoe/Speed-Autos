@@ -1,0 +1,4593 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --clr1: #e0e0e0;
+  --clr2: #bdbdbd;
+  --clr3: #2ecc71;
+  --clr4: #27ae60;
+  --clr5: #8e8e8e;
+  --clr6: #f1f1f1;
+  --clr7: #000;
+  --clr8: #1b1b1b;
+  --clr9: #000;
+  --clr10: #f5f5f5;
+  --clr11: #ffffff;
+  --clr12: #a5ffce;
+  --clr13: #333;
+  --font-main: #f2f2f2;
+  --font-muted: #bbbbbb;
+  --font-accent: #9fe6a0;
+  --font-heading: #ffffff; /* Pure white for main headings */
+  --font-subheading: #d0ffd0; /* Pale green for secondary headings */
+  --box-bg-1: #1b2b22; /* Deep jungle green */
+  --box-bg-2: #25382f; /* Slightly lighter box variant */
+  --box-hover: #2e4d3e; /* Box hover state - smooth transition */
+  --border-color: #3f5e4b; /* Subtle green-gray border */
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "ATVFabriga";
+  background: linear-gradient(to bottom, #000000, #0b2014, #103221, #1a3d2f);
+}
+a {
+  text-decoration: none;
+  color: var(--font-accent);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--clr10);
+}
+ul {
+  list-style: none;
+}
+.nav {
+  background: linear-gradient(
+    to right,
+    var(--clr3),
+    var(--clr4),
+    var(--clr7),
+    var(--clr8)
+  );
+  padding: 1rem 1.5rem 0 1.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-logo {
+  background: url(static/img/1-removebg-preview.png) no-repeat center / cover;
+  height: 6rem;
+  width: 6rem;
+}
+.nav_links {
+  display: flex;
+  font-size: 1.5rem;
+}
+.nav_link > a {
+  padding: 1rem;
+  display: block;
+}
+.nav_link > a:hover {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+.mid {
+  display: none;
+}
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+.svg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--font-accent);
+}
+.svg > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--font-accent);
+}
+.text {
+  text-align: center;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0.8rem;
+}
+.nav__hamburger {
+  height: 1.313rem;
+  width: 1.875rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  align-items: center;
+}
+
+.nav__hamburger__line {
+  height: 0.188rem;
+  width: 100%;
+  background-color: var(--font-accent);
+  border-radius: 0.625rem;
+  transition: all ease-in-out 0.2s;
+}
+
+.swiper {
+  height: 90vh;
+  margin-top: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.swiper-slide {
+  background-color: beige;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  background: no-repeat center / cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: multiply;
+  width: 100%;
+}
+.r1 {
+  padding: 2rem;
+}
+
+.heed {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  text-align: center;
+  line-height: 1.2px;
+}
+.heed > span {
+  color: var(--clr3);
+}
+.works {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 1.5rem;
+}
+.lest {
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+}
+.lest:hover {
+  background-color: var(--box-hover);
+  box-shadow: 0 8px 24px rgba(159, 230, 160, 0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+.lest > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+.lest > h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1.2rem 6rem 0.8rem 2rem;
+  color: var(--font-main);
+}
+.lest > h3 .speed-autos {
+  font-weight: 500;
+  color: var(--font-accent);
+  margin-top: 0.3rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+.lest > p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.2rem 6rem 0.8rem 2rem;
+  color: var(--font-muted);
+}
+.btn {
+  display: block;
+  margin: 4.4rem auto 2rem auto;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+  background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(36, 45, 61, 0.18);
+}
+
+.lest2 {
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+}
+.lest2:hover {
+  background-color: var(--box-hover);
+  box-shadow: 0 8px 24px rgba(159, 230, 160, 0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+.lest2 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 1.2rem;
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
+}
+.lest2 > h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 1.2rem 6rem 0.8rem 2rem;
+  color: var(--font-main);
+}
+.lest2 > p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1.2rem 6rem 0.8rem 2rem;
+  color: var(--font-muted);
+}
+.btn1 {
+  display: block;
+  margin: 3.9rem auto 2.5rem auto;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn1:hover {
+  background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(36, 45, 61, 0.18);
+}
+.btn2 {
+  display: block;
+  margin: 2.5rem auto 2.5rem auto;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn2:hover {
+  background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(36, 45, 61, 0.18);
+}
+
+.lease {
+  display: flex;
+  padding: 0 18px;
+  gap: 1rem;
+  max-height: 360px;
+  overflow-x: auto;
+}
+.lease::-webkit-scrollbar {
+  display: none;
+}
+
+.leas1 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas1 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.imp {
+  display: flex;
+  padding: 5px 10px;
+  gap: 1rem;
+}
+.tip {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.price {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.agree {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--font-muted);
+}
+.act {
+  font-size: larger;
+  font-weight: 600;
+}
+.tips {
+  font-size: larger;
+  font-weight: none;
+  display: inline;
+}
+.tipss {
+  font-size: larger;
+  font-weight: none;
+}
+.keg {
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  margin-top: 5px;
+  line-height: 1.3;
+  color: var(--font-heading);
+}
+.agre {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--font-muted);
+  padding: 3px 10px;
+  line-height: 1.2;
+}
+
+.leas2 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas2 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas3 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas3 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas4 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas4 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas5 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas5 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas6 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding-bottom: 1.5rem;
+  min-width: 255px;
+}
+.leas6 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas7 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas7 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas8 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas8 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas9 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas9 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas10 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas10 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas11 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas11 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.leas12 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+}
+.leas12 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  width: 250px;
+}
+.lest,
+.lest2,
+.leas1,
+.leas2,
+.leas3,
+.leas4,
+.leas5,
+.leas6,
+.leas7,
+.leas8,
+.leas9,
+.leas10,
+.leas11,
+.leas12 {
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.leas1:hover,
+.leas2:hover,
+.leas3:hover,
+.leas4:hover,
+.leas5:hover,
+.leas6:hover,
+.leas7:hover,
+.leas8:hover,
+.leas9:hover,
+.leas10:hover,
+.leas11:hover,
+.leas12:hover {
+  background-color: var(--box-hover);
+  box-shadow: 0 8px 24px rgba(159, 230, 160, 0.1);
+  transform: translateY(-4px) scale(1.02);
+}
+
+.stud {
+  font-size: 1.6rem;
+  padding: 5px 10px;
+  line-height: 1.1;
+  margin: 25px auto;
+  display: block;
+  text-align: center;
+  border: none;
+  background-color: inherit;
+  color: var(--clr8);
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+.stud:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+.stud::after {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--font-accent);
+  transition: width 0.5s ease-in-out;
+}
+.stud:hover::after {
+  width: 100%;
+}
+.scheduling {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding: 0 18px;
+  gap: 1.3rem;
+  margin: 0 auto;
+  min-height: 270px;
+  overflow-x: auto;
+}
+
+.facts1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-hover);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  min-width: 240px;
+}
+.fact-1 > img {
+  padding: auto;
+  margin: 0 auto;
+  display: block;
+}
+.sch {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 8px;
+}
+.hed {
+  color: var(--font-muted);
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 5px 12px 5px;
+}
+.facts2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-hover);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  min-width: 240px;
+}
+.fact-2 > img {
+  padding: auto;
+  margin: 0 auto;
+  display: block;
+}
+.facts3 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-hover);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  min-width: 240px;
+}
+.fact-3 > img {
+  padding: auto;
+  margin: 0 auto;
+  display: block;
+}
+.facts4 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-hover);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  min-width: 240px;
+}
+.fact-4 > img {
+  padding: auto;
+  margin: 0 auto;
+  display: block;
+}
+.West {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  line-height: 1.2px;
+  padding: 0 18px;
+}
+.quest {
+  padding: 0 18px;
+}
+.quest1 {
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1.3rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+}
+.quest1 > svg {
+  color: var(--font-accent);
+}
+.quest1 > p {
+  font-size: 2rem;
+}
+.quest1:hover {
+  background-color: var(--box-hover);
+}
+.quest2 {
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1.3rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+}
+.quest2 > svg {
+  color: var(--font-accent);
+}
+.quest2 > p {
+  font-size: 2rem;
+}
+.quest2:hover {
+  background-color: var(--box-hover);
+}
+.quest3 {
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1.3rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+}
+.quest3 > svg {
+  color: var(--font-accent);
+}
+.quest3 > p {
+  font-size: 2rem;
+}
+.quest3:hover {
+  background-color: var(--box-hover);
+}
+.quest4 {
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1.3rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+}
+.quest4 > svg {
+  color: var(--font-accent);
+}
+.quest4 > p {
+  font-size: 2rem;
+}
+.quest4:hover {
+  background-color: var(--box-hover);
+}
+.quest5 {
+  display: flex;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 2.5rem 1.3rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+}
+.quest5 > svg {
+  color: var(--font-accent);
+}
+.quest5 > p {
+  font-size: 2rem;
+}
+.quest5:hover {
+  background-color: var(--box-hover);
+}
+.footer {
+  background: linear-gradient(
+    to right,
+    var(--box-bg-1),
+    var(--box-bg-2),
+    var(--clr8)
+  );
+  color: var(--font-main);
+  padding: 2.5rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+.foot-head {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  padding: 5px 0;
+}
+.foot-bod {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+.foot-icons i {
+  color: var(--font-accent);
+  font-size: 25px;
+  padding-right: 20px;
+  margin: 30px 0;
+}
+.foot-link > a {
+  padding: 1rem;
+  display: block;
+  color: var(--font-muted);
+  font-size: 1.8rem;
+}
+.foot-link > a:hover {
+  background-color: rgba(46, 204, 113, 0.2);
+}
+.contact-icon2 {
+  align-items: center;
+}
+.contact-icon2 > p {
+  font-size: 1.8rem;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/* Vehicles starts here */
+.tops {
+  background: url(static/img/All-Electric-Page-Link-Out-Desktop.avif) no-repeat
+    center / cover;
+  height: 88vh;
+  position: relative;
+}
+.top1 {
+  display: inline-block;
+  gap: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 20px;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  align-items: center;
+  position: absolute;
+  top: 35px;
+  border-radius: 16px;
+  left: 30px;
+  max-width: 320px;
+}
+.heart {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  text-align: center;
+  line-height: 1.2px;
+  padding: 20px 0 25px;
+}
+.hear {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--font-main);
+  text-align: center;
+  padding-bottom: 15px;
+}
+.top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.pick {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 5px;
+}
+.tp {
+  width: 130px;
+  height: 52px;
+  margin-bottom: 20px;
+}
+.bttn {
+  display: flex;
+  margin: 1rem auto 2rem auto;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  gap: 10px;
+}
+.bttn > svg {
+  align-items: center;
+}
+.pitt {
+  align-items: center;
+  font-size: 1.5rem;
+  color: var(--font-muted);
+}
+.stun {
+  font-size: 1.4rem;
+  padding: 5px 10px;
+  line-height: 1.1;
+  margin: 10px auto;
+  display: block;
+  text-align: center;
+  border: none;
+  background-color: inherit;
+  color: var(--font-accent);
+  transition: background 0.3s, transform 0.2s;
+  position: relative;
+}
+.stun:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+.stun::after {
+  content: " ";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--font-accent);
+  transition: width 0.5s ease-in-out;
+}
+.stun:hover::after {
+  width: 100%;
+}
+.herald {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  line-height: 1.2px;
+  padding: 0 18px;
+}
+.issues {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 18px;
+  gap: 1.3rem;
+  margin: 0 auto;
+}
+.rogue1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.riggs {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.rig {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 8px;
+}
+.riggi {
+  color: var(--font-muted);
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 5px 12px 5px;
+}
+.rogue2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.riggs2 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.rogue3 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.riggs3 {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.newly {
+  display: flex;
+  padding: 0 18px;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.cars-new1 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-new1 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.carn {
+  padding: 10px;
+}
+.crick {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+}
+.srick {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 5px 0px 0;
+}
+.streak {
+  color: var(--font-muted);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  padding: 5px 0px 0;
+}
+.stake {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--font-muted);
+}
+.stack {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  color: var(--font-muted);
+  padding-bottom: 7px;
+}
+.heath {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: var(--font-main);
+  padding: 12px 0 0;
+}
+.crake {
+  font-size: 1.8rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: var(--font-main);
+}
+.cars-new2 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-new2 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-new3 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-new3 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-new4 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-new4 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  max-height: 21.8rem;
+  min-height: 21.3rem;
+  height: 100%;
+  min-width: 24rem;
+}
+.cars-newA {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-newA > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  background-color: var(--clr11);
+  max-height: 21.8rem;
+  min-height: 17rem;
+  height: 100%;
+  min-width: 24rem;
+}
+.cars-newB {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-newB > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-newC {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-newC > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-newD {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-newD > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-now1 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-now1 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-now2 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-now2 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-now3 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-now3 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-now4 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-now4 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.cars-new-1 {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.cars-new-1 > img {
+  border-radius: 16px 16px 0 0;
+  margin-bottom: 0.8rem;
+  object-fit: cover;
+  max-width: 29rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.how-to {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 18px;
+  gap: 1.3rem;
+  margin: 0 auto;
+}
+.stepsss1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.stepsss2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.stepsss3 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.riggsly {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.rig-ss1 {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding: 15px 8px;
+}
+.riggi-ss1 {
+  color: var(--font-muted);
+  font-size: 1.3rem;
+  font-weight: 200;
+  text-align: center;
+  line-height: 1.3;
+  padding: 0 5px 12px 5px;
+}
+.riggsly2 {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.riggsly2 > svg {
+  left: 5px;
+  position: inherit;
+  top: 4px;
+}
+.riggsly3 {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.riggsly3 > svg {
+  left: 7px;
+  position: inherit;
+  top: 4px;
+}
+.used-cars {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 50px 18px;
+}
+.used-car-A {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img {
+  background: url(static/img/U1.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-font {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 900;
+  padding: 15px 10px;
+}
+.use-car-fon {
+  color: var(--font-muted);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 700;
+  padding: 9px 10px;
+}
+.use-car-pa {
+  color: var(--font-muted);
+  font-size: 1.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding: 5px 10px;
+}
+.used-car-B {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img2 {
+  background: url(static/img/U2.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-C {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img3 {
+  background: url(static/img/U3.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-D {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img4 {
+  background: url(static/img/u4.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-E {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img5 {
+  background: url(static/img/u5.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-F {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img6 {
+  background: url(static/img/u6.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-G {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img7 {
+  background: url(static/img/U7.jpg) no-repeat center / cover;
+  height: 19rem;
+  min-width: 24rem;
+  max-width: 27.8rem;
+  width: 100%;
+}
+.used-car-H {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img8 {
+  background: url(static/img/U8.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-I {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img9 {
+  background: url(static/img/u9.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-J {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img10 {
+  background: url(static/img/u10.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-K {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img11 {
+  background: url(static/img/u11.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+.used-car-L {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding-bottom: 1.5rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.used-car-img12 {
+  background: url(static/img/u12.jpg) no-repeat center / cover;
+  height: 19rem;
+  max-width: 27.8rem;
+  width: 100%;
+  min-width: 24rem;
+}
+/* Vehicles End */
+
+/* Car Valuation starts */
+.car-val-first {
+  background: url(static/img/da2.jpg) no-repeat center / cover;
+  height: 88vh;
+  position: relative;
+}
+.car-val-aside {
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+  min-width: 255px;
+  padding: 1.5rem 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  max-width: 270px;
+  position: absolute;
+  top: 25px;
+  left: 20px;
+}
+.car-val-but {
+  display: flex;
+  margin: 1rem auto 2rem auto;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  gap: 10px;
+}
+.car-val-head {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.3;
+  padding: 12px 0px;
+  text-align: center;
+}
+.car-val-write {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 0px 0px 12px;
+  text-align: center;
+}
+.car-val-fun {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.3;
+  padding: 0px 0px 12px;
+  text-align: center;
+}
+.car-v-h {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  line-height: 1.2px;
+  padding: 0 18px;
+  text-align: center;
+}
+.car-value-tip {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0 18px;
+  gap: 1.3rem;
+  margin: 0 auto;
+}
+.car-val-guide1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.car-guide-pic1 {
+  position: relative;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.car-val-p {
+  color: var(--font-main);
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  padding: 15px 8px;
+}
+.car-guide-pic1 > img {
+  position: inherit;
+}
+
+.car-val-guide2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.car-guide-pic2 {
+  position: relative;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.car-guide-pic2 > img {
+  position: inherit;
+}
+.car-val-guide3 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.car-guide-pic3 {
+  position: relative;
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  background-color: var(--box-hover);
+  margin: 0 auto;
+}
+.car-guide-pic3 > img {
+  position: inherit;
+}
+
+.car-val-know {
+  display: flex;
+  gap: 10px;
+  padding: 0 18px;
+  margin: 20px auto;
+  justify-content: space-between;
+}
+.car-know1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--clr7);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  max-height: 350px;
+}
+.car-know-h {
+  color: var(--font-main);
+  font-size: 3rem;
+  line-height: 1.2;
+  font-weight: 700;
+  text-align: center;
+  padding: 35px 20px 25px 20px;
+}
+.car-know-pr {
+  color: var(--font-main);
+  font-size: 2rem;
+  line-height: 1.3;
+  font-weight: 500;
+  padding: 0 15px 20px 15px;
+}
+.car-v-hont {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 3rem 0 0;
+  line-height: 1.3px;
+  padding: 0 18px 16px 18px;
+  text-align: center;
+}
+.car-val-hint {
+  color: var(--font-main);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding: 5px 10px 10px 10px;
+  margin: 0 auto;
+}
+.car-val-art {
+  display: flex;
+  padding: 0 18px;
+  margin: 20px auto;
+  gap: 10px;
+}
+.car-pic-font {
+  color: var(--font-main);
+  font-size: 1.5rem;
+  line-height: 1.2;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 8px;
+}
+.car-fact-pic1 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.car-fact-pic1 > img {
+  height: 20rem;
+  max-width: 60rem;
+  width: 100%;
+  min-width: 24rem;
+  object-fit: cover;
+}
+.car-fact-pic2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  padding: 1.5rem 0.7rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.car-fact-pic2 > img {
+  height: 20rem;
+  max-width: 60rem;
+  width: 100%;
+  min-width: 24rem;
+  object-fit: cover;
+}
+.car-val-under {
+  color: var(--font-main);
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 600;
+  padding-bottom: 8px;
+}
+.car-val-quest1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-val-quest2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-val-quest3 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-val-quest4 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+
+.under-quest {
+  color: var(--font-main);
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding-top: 5px;
+}
+.car-value-questss1 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-value-questss2 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-value-questss3 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+.car-value-questss4 {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 5px;
+}
+/* Car Valuation Ends */
+
+/* Car Reviews Starts */
+.head-review {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 8rem 0 0;
+  line-height: 1.3px;
+  padding: 0 18px 16px 18px;
+  text-align: center;
+}
+.head-second {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  padding: 0 18px 16px 18px;
+  text-align: center;
+}
+.fintin {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  line-height: 1.3px;
+  padding: 0 18px 16px 18px;
+}
+.reviewing {
+  display: flex;
+  padding: 0 18px;
+  gap: 1.3rem;
+}
+.car-re-view1 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+  padding: 0 24px 0 0;
+}
+.car-re-pic-1 {
+  background: url(static/img/car-view9.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-hunt1 {
+  padding: 1.6rem;
+}
+.car-re-hunt2 {
+  padding: 1.6rem;
+}
+.car-re-hunt3 {
+  padding: 1.6rem;
+}
+.car-re-hunt4 {
+  padding: 1.6rem;
+}
+.car-re-hunt5 {
+  padding: 1.6rem;
+}
+.car-re-hunt6 {
+  padding: 1.6rem;
+}
+.car-re-hunt7 {
+  padding: 1.6rem;
+}
+.car-re-hunt8 {
+  padding: 1.6rem;
+}
+.car-re-hunt9 {
+  padding: 1.6rem;
+}
+.car-re-hunt10 {
+  padding: 1.6rem;
+}
+.car-re-hunt11 {
+  padding: 1.6rem;
+}
+.car-re-hunt12 {
+  padding: 1.6rem;
+}
+.cart-font {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--font-heading);
+  padding-bottom: 10px;
+}
+.cart-fonts1 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--font-main);
+}
+.base-line {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--font-main);
+  padding-top: 44px;
+}
+.base-line2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--font-main);
+  padding-top: 64px;
+}
+.car-re-view2 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-2 {
+  background: url(static/img/car-view2.jpg) no-repeat center / cover;
+  height: 20.3rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view3 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-3 {
+  background: url(static/img/car-view3.jpg) no-repeat center / cover;
+  height: 20.3rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view4 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-4 {
+  background: url(static/img/car-view6.jpg) no-repeat center / cover;
+  height: 20.6rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view5 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-5 {
+  background: url(static/img/car-view1.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view6 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-6 {
+  background: url(static/img/car-view4.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view7 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-7 {
+  background: url(static/img/car-view5.jpg) no-repeat center / cover;
+  height: 20.3rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view8 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-8 {
+  background: url(static/img/car-view8.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view9 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-9 {
+  background: url(static/img/car-view7.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view10 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-10 {
+  background: url(static/img/car-view10.jpg) no-repeat center / cover;
+  height: 18rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view11 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-11 {
+  background: url(static/img/car-view12.jpg) no-repeat center / cover;
+  height: 18rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-re-view12 {
+  display: flex;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s, transform 0.3s;
+  border-radius: 16px;
+}
+.car-re-pic-12 {
+  background: url(static/img/car-view11.jpg) no-repeat center / cover;
+  height: 18.2rem;
+  max-width: 30rem;
+  min-width: 29rem;
+  width: 100%;
+}
+.car-rev-iew-2 {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 1rem;
+  background-color: var(--box-bg-1);
+  color: var(--font-main);
+  transition: box-shadow 0.3s, transform 0.3s;
+  padding: 0 10px 0 2.4rem;
+  min-width: 31rem;
+  width: 33rem;
+}
+.car-pop {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--font-heading);
+  padding: 12px 0;
+}
+.car-sip {
+  font-size: 1.6rem;
+  padding: 12px 0;
+  font-weight: 500;
+  color: var(--font-muted);
+}
+.car-meet {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--font-heading);
+  padding: 12px 0;
+  margin-top: 9rem;
+}
+.car-team-mem1 {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.car-mem-font {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--font-heading);
+  /* padding: 7px 0 0; */
+}
+.car-meme {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--font-main);
+}
+.car-team-mem2 {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.car-team-mem3 {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+.car-team-mem4 {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+/* Car Reviews Ends */
+
+/* About starts */
+.car-about-first {
+  background: url(static/img/Abt1.jpg) no-repeat center / cover;
+  height: 88vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+}
+.car-about-head {
+  font-size: 6.5vw;
+  line-height: 100%;
+  color: var(--font-heading);
+  margin: 0 20px;
+  padding: 40px 0;
+}
+/* About Ends */
+
+@media (max-width: 1165px) {
+  html {
+    font-size: 70%;
+  }
+  .heed {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 4rem 0;
+    text-align: center;
+    line-height: 1.2px;
+  }
+  .heed > span {
+    color: var(--clr8);
+  }
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1rem;
+    row-gap: 0.4rem;
+  }
+  .lest {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .lest2:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .lest2:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .lest > img {
+    height: 200px;
+    width: 100%;
+  }
+  .lest2 > img {
+    display: none;
+  }
+  .imp {
+    display: flex;
+    padding: 5px 10px;
+    gap: 0.8rem;
+  }
+  .tip {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  .price {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .agree {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  .act {
+    font-size: larger;
+    font-weight: 600;
+  }
+  .tips {
+    font-size: larger;
+    font-weight: none;
+    display: inline;
+  }
+  .tipss {
+    font-size: larger;
+    font-weight: none;
+  }
+  .keg {
+    font-size: 1.4rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  .agre {
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    line-height: 1.2;
+  }
+  .footer {
+    padding: 2rem 1.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .foot-head {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    padding: 5px 0;
+  }
+  .foot-bod {
+    font-size: 1.6rem;
+    margin: 10px 0;
+  }
+  .foot-icons i {
+    color: var(--font-accent);
+    font-size: 25px;
+    padding-right: 20px;
+    margin: 30px 0;
+  }
+  .foot-link > a {
+    padding: 1rem;
+    display: block;
+    color: var(--font-muted);
+    font-size: 1.6rem;
+  }
+  .foot-link > a:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+  }
+  .contact-icon2 {
+    align-items: center;
+  }
+  .contact-icon2 > p {
+    font-size: 1.6rem;
+    padding: 10px 0;
+  }
+  .newly {
+    display: contents;
+    padding: 0 18px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .newly-cars {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 18px;
+    gap: 15px;
+  }
+  .newly-cars2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 18px;
+    gap: 15px;
+    align-items: stretch;
+  }
+  .newly-cars3 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 18px;
+    gap: 15px;
+  }
+  .newly-cars4 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 18px;
+    gap: 15px;
+  }
+  .how-to {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0 18px;
+    gap: 1.3rem;
+    margin: 0 auto;
+  }
+  .used-cars {
+    display: contents;
+  }
+  .used-car-1 {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 0 18px;
+  }
+  .used-car-2 {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 0 18px;
+  }
+  .used-car-3 {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 0 18px;
+  }
+  .used-car-4 {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    padding: 0 18px;
+  }
+  .cars-newA > img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .crick {
+    color: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .srick {
+    color: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding: 5px 0px 0;
+  }
+  .streak {
+    color: var(--font-muted);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 5px 0px 0;
+  }
+  .stake {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+  }
+  .stack {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+    padding-bottom: 7px;
+  }
+  .heath {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--font-main);
+    padding: 12px 0 0;
+  }
+  .crake {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--font-main);
+  }
+}
+
+@media (max-width: 800px) {
+  html {
+    font-size: 62.5%;
+  }
+  .heed {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 4rem 0;
+    text-align: center;
+    line-height: 1.2px;
+  }
+  .heed > span {
+    color: var(--font-accent);
+  }
+  .works {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1.6rem;
+    row-gap: 0.4rem;
+  }
+  .lest {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .lest2:first-of-type {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .lest2:last-of-type {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .lest > img {
+    height: 150px;
+    width: 100%;
+  }
+  .lest2 > img {
+    display: none;
+  }
+  .nav-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .nav-right > li > svg {
+    height: 1.6rem;
+    width: 1.6rem;
+  }
+  .svg > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--font-accent);
+  }
+  .text {
+    display: none;
+  }
+  .scheduling {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 0 16px;
+    gap: 1.3rem;
+    margin: 0 auto;
+    min-height: 270px;
+    overflow-x: auto;
+  }
+
+  .facts1 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 1.5rem 0.7rem;
+    background-color: var(--box-hover);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    min-width: 240px;
+  }
+  .fact-1 > img {
+    padding: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .sch {
+    color: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .hed {
+    color: var(--font-muted);
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 5px 12px 5px;
+  }
+  .footer {
+    padding: 2rem 1.8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .foot-head {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    padding: 5px 0;
+  }
+  .foot-bod {
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
+  .foot-icons i {
+    color: var(--font-accent);
+    font-size: 25px;
+    padding-right: 20px;
+    margin: 30px 0;
+  }
+  .foot-link > a {
+    padding: 1rem;
+    display: block;
+    color: var(--font-muted);
+    font-size: 1.4rem;
+  }
+  .foot-link > a:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+  }
+  .contact-icon2 {
+    align-items: center;
+  }
+  .contact-icon2 > p {
+    font-size: 1.4rem;
+    padding: 10px 0;
+  }
+  .tops {
+    background: url(static/img/All-Electric-Page-Link-Out-Desktop.avif)
+      no-repeat center / cover;
+    height: 110vh;
+    position: relative;
+  }
+  .top1 {
+    display: inline-block;
+    gap: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 20px;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+    position: absolute;
+    top: 50px;
+    border-radius: 16px;
+    left: 35px;
+    max-width: 320px;
+  }
+  .heart {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    text-align: center;
+    line-height: 1.4px;
+    padding: 20px 0 25px;
+  }
+  .hear {
+    font-size: 2.3rem;
+    font-weight: 500;
+    color: var(--font-main);
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .pick {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 7px;
+  }
+  .tp {
+    width: 110px;
+    height: 42px;
+    margin-bottom: 20px;
+  }
+  .bttn {
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    gap: 8px;
+  }
+  .bttn > svg {
+    align-items: center;
+  }
+  .pitt {
+    align-items: center;
+    font-size: 1.8rem;
+    color: var(--font-muted);
+  }
+  .stun {
+    font-size: 1.9rem;
+    padding: 5px 10px;
+    line-height: 1.2;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    color: var(--font-accent);
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+  }
+  .stun:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  .stun::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--font-accent);
+    transition: width 0.5s ease-in-out;
+  }
+  .stun:hover::after {
+    width: 100%;
+  }
+  .herald {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 5rem 0;
+    line-height: 1.2px;
+    padding: 0 18px;
+  }
+  .rogue1 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    padding: 1.3rem 0.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .riggs {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: var(--box-hover);
+    margin: 0 auto;
+  }
+  .rig {
+    color: var(--font-main);
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-weight: 500;
+    text-align: center;
+    padding: 10px 6px;
+  }
+  .riggi {
+    color: var(--font-muted);
+    font-size: 1.3rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 3px 9px 4px;
+  }
+  .crick {
+    color: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .srick {
+    color: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding: 5px 0px 0;
+  }
+  .streak {
+    color: var(--font-muted);
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 5px 0px 0;
+  }
+  .stake {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+  }
+  .stack {
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+    padding-bottom: 7px;
+  }
+  .heath {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--font-main);
+    padding: 12px 0 0;
+  }
+  .crake {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--font-main);
+  }
+  .newly {
+    display: contents;
+    padding: 0 18px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .newly-cars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .newly-cars2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .newly-cars3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .newly-cars4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .cars-new3 {
+    display: none;
+  }
+  .cars-newA {
+    display: none;
+  }
+  .cars-newD {
+    display: none;
+  }
+  .cars-now4 {
+    display: none;
+  }
+  .cars-new1 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-new2 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-newB > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-newC > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-now1 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-now2 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-now3 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+  }
+  .cars-new4 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 37.4rem;
+    width: 100%;
+    min-width: 23rem;
+    max-height: 26.3rem;
+    min-height: 20rem;
+    height: 120%;
+  }
+  .used-cars {
+    display: contents;
+    padding: 0 18px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .used-car-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .used-car-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .used-car-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .used-car-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .used-car-C {
+    display: none;
+  }
+  .used-car-F {
+    display: none;
+  }
+  .used-car-I {
+    display: none;
+  }
+  .used-car-L {
+    display: none;
+  }
+  .used-car-A {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img {
+    background: url(static/img/U1.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-B {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img2 {
+    background: url(static/img/U2.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-D {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img4 {
+    background: url(static/img/U4.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-E {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img5 {
+    background: url(static/img/U5.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-G {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img7 {
+    background: url(static/img/U7.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-H {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img8 {
+    background: url(static/img/U8.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-J {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img10 {
+    background: url(static/img/U10.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+  .used-car-K {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 370px;
+  }
+  .used-car-img11 {
+    background: url(static/img/U11.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    font-size: 50%;
+  }
+  .nav_links {
+    display: none;
+    z-index: -1;
+  }
+  .mid {
+    display: grid;
+    grid-template-columns: 1fr;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-right {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+  }
+  .nav-right > li > svg {
+    height: 3rem;
+    width: 3rem;
+    align-self: center;
+  }
+  .svg > img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--font-accent);
+    width: 3rem;
+  }
+  .nav__hamburger {
+    height: 2.313rem;
+    width: 2.875rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    align-items: center;
+    margin-top: 1.7rem;
+  }
+  .nav__hamburger.active :nth-child(1) {
+    transform: rotate(45deg) translate(0.721rem, 0.345rem);
+  }
+  .nav__hamburger.active :nth-child(2) {
+    opacity: 0;
+  }
+  .nav__hamburger.active :nth-child(3) {
+    transform: rotate(-45deg) translate(0.721rem, -0.345rem);
+  }
+  .imp {
+    display: flex;
+    padding: 5px 10px;
+    gap: 1.3rem;
+  }
+  .tip {
+    font-size: 1.4rem;
+    font-weight: 400;
+  }
+  .price {
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+  .agree {
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  .act {
+    font-size: 1.7rem;
+    font-weight: 600;
+  }
+  .tips {
+    font-size: 1.5rem;
+    font-weight: none;
+    display: inline;
+  }
+  .tipss {
+    font-size: 1.5rem;
+    font-weight: none;
+  }
+  .keg {
+    font-size: 1.8rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  .agre {
+    font-size: 1.6rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    line-height: 1.2;
+  }
+
+  .sch {
+    color: var(--font-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .hed {
+    color: var(--font-muted);
+    font-size: 1.6rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 5px 12px 5px;
+  }
+  .footer {
+    padding: 2rem 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .foot-head {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    padding: 5px 0;
+  }
+  .foot-bod {
+    font-size: 2rem;
+    margin: 10px 0;
+    line-height: 1.3;
+  }
+  .foot-icons i {
+    color: var(--font-accent);
+    font-size: 25px;
+    padding-right: 20px;
+    margin: 30px 0;
+  }
+  .foot-link > a {
+    padding: 1rem;
+    display: block;
+    color: var(--font-muted);
+    font-size: 2rem;
+  }
+  .foot-link > a:hover {
+    background-color: rgba(46, 204, 113, 0.2);
+  }
+  .contact-icon2 {
+    align-items: center;
+  }
+  .contact-icon2 > p {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+  .tops {
+    background: none;
+  }
+  .top1 {
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .heart {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    text-align: center;
+    line-height: 1.5px;
+    padding: 20px 0 25px;
+  }
+  .hear {
+    font-size: 2.6rem;
+    font-weight: 500;
+    color: var(--font-main);
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .pick {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 7px;
+  }
+  .tp {
+    width: 110px;
+    height: 42px;
+    margin-bottom: 20px;
+  }
+  .bttn {
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    gap: 8px;
+  }
+  .bttn > svg {
+    align-items: center;
+  }
+  .pitt {
+    align-items: center;
+    font-size: 2rem;
+    color: var(--font-muted);
+  }
+  .stun {
+    font-size: 2rem;
+    padding: 5px 10px;
+    line-height: 1.1;
+    margin: 10px auto;
+    display: block;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    color: var(--font-accent);
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+  }
+  .stun:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  .stun::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--font-accent);
+    transition: width 0.5s ease-in-out;
+  }
+  .stun:hover::after {
+    width: 100%;
+  }
+  .herald {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 5rem 0;
+    line-height: 1.2px;
+    padding: 0 18px;
+  }
+  .issues {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 18px;
+    gap: 1.3rem;
+    margin: 0 auto;
+  }
+  .rogue1 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 1.5rem 0.7rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .rogue2 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 1.5rem 0.7rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .rogue3 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 1.5rem 0.7rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .riggs {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: var(--box-hover);
+    margin: 0 auto;
+  }
+  .rig {
+    color: var(--font-main);
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .riggi {
+    color: var(--font-muted);
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 8px 15px 8px;
+  }
+  .newly {
+    display: contents;
+    padding: 0 18px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .used-car-A {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img {
+    background: url(static/img/U1.jpg) no-repeat center / cover;
+    height: 19rem;
+    max-width: 55rem;
+    width: 100%;
+    min-width: 24rem;
+  }
+}
+
+@media (max-width: 560px) {
+  html {
+    font-size: 40%;
+  }
+  .heed {
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 4rem 0;
+    text-align: center;
+    line-height: 1.2px;
+  }
+  .heed > span {
+    color: var(--font-accent);
+  }
+  .works {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    align-items: stretch;
+  }
+  .lest > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 1.2rem;
+    object-fit: cover;
+    height: 250px;
+    width: 100%;
+  }
+  .lest > p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.2rem 6rem 0.8rem 2rem;
+    color: var(--font-muted);
+  }
+  .lest2 > p {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 1.2rem 6rem 0.8rem 2rem;
+    color: var(--font-muted);
+  }
+  .lest > h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1.2rem 6rem 0.8rem 2rem;
+  }
+  .lest > h3 .speed-autos {
+    display: block;
+    color: var(--font-accent);
+    margin-top: 0.3rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.5rem;
+  }
+  .lest2 > h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    padding: 1.2rem 6rem 0.8rem 2rem;
+  }
+  .imp {
+    display: flex;
+    padding: 5px 10px;
+    gap: 1.8rem;
+  }
+  .tip {
+    font-size: 1.7rem;
+    font-weight: 400;
+  }
+  .price {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .agree {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+  .act {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .tips {
+    font-size: 1.8rem;
+    font-weight: none;
+    display: inline;
+  }
+  .tipss {
+    font-size: 1.8rem;
+    font-weight: none;
+  }
+  .keg {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 3px 10px;
+    margin-top: 5px;
+    line-height: 1.3;
+  }
+  .agre {
+    font-size: 1.9rem;
+    font-weight: 500;
+    padding: 3px 10px;
+    line-height: 1.2;
+  }
+  .sch {
+    color: var(--font-main);
+    font-size: 2.4rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .hed {
+    color: var(--font-muted);
+    font-size: 2rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 5px 12px 5px;
+  }
+  .West {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 5rem 0;
+    line-height: 1.2px;
+    padding: 0 18px;
+  }
+  .quest {
+    padding: 0 18px;
+  }
+  .quest1 {
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.3rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+  }
+  .quest1 > svg {
+    color: var(--font-accent);
+  }
+  .quest1 > p {
+    font-size: 2.2rem;
+  }
+  .quest1:hover {
+    background-color: var(--box-hover);
+  }
+  .quest2 {
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.3rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+  }
+  .quest2 > svg {
+    color: var(--font-accent);
+  }
+  .quest2 > p {
+    font-size: 2.2rem;
+  }
+  .quest2:hover {
+    background-color: var(--box-hover);
+  }
+  .quest3 {
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.3rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+  }
+  .quest3 > svg {
+    color: var(--font-accent);
+  }
+  .quest3 > p {
+    font-size: 2.2rem;
+  }
+  .quest3:hover {
+    background-color: var(--box-hover);
+  }
+  .quest4 {
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.3rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+  }
+  .quest4 > svg {
+    color: var(--font-accent);
+  }
+  .quest4 > p {
+    font-size: 2.2rem;
+  }
+  .quest4:hover {
+    background-color: var(--box-hover);
+  }
+  .quest5 {
+    display: flex;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    padding: 2.5rem 1.3rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    align-items: center;
+  }
+  .quest5 > svg {
+    color: var(--font-accent);
+  }
+  .quest5 > p {
+    font-size: 2.2rem;
+  }
+  .quest5:hover {
+    background-color: var(--box-hover);
+  }
+  .top1 {
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 255px;
+  }
+  .heart {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    text-align: center;
+    line-height: 1.5px;
+    padding: 15px 0 20px;
+  }
+  .hear {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: var(--font-main);
+    text-align: center;
+    padding-bottom: 15px;
+  }
+  .pick {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 7px;
+  }
+  .tp {
+    width: 100px;
+    height: 35px;
+    margin-bottom: 20px;
+  }
+  .bttn {
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 1.2rem 2.5rem;
+    background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    gap: 5px;
+  }
+  .bttn > svg {
+    align-items: center;
+  }
+  .pitt {
+    align-items: center;
+    font-size: 2.3rem;
+    color: var(--font-muted);
+  }
+  .stun {
+    font-size: 2.2rem;
+    padding: 5px 10px;
+    line-height: 1.1;
+    margin: 12px auto;
+    display: block;
+    text-align: center;
+    border: none;
+    background-color: inherit;
+    color: var(--font-accent);
+    transition: background 0.3s, transform 0.2s;
+    position: relative;
+  }
+  .stun:hover {
+    transform: translateY(-4px) scale(1.02);
+  }
+  .stun::after {
+    content: " ";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--font-accent);
+    transition: width 0.5s ease-in-out;
+  }
+  .stun:hover::after {
+    width: 100%;
+  }
+  .riggs {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: var(--box-hover);
+    margin: 0 auto;
+  }
+  .rig {
+    color: var(--font-main);
+    font-size: 2.6rem;
+    line-height: 1.4;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .riggi {
+    color: var(--font-muted);
+    font-size: 2.3rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 8px 15px 8px;
+  }
+  .crick {
+    color: var(--font-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+  .srick {
+    color: var(--font-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding: 5px 0px 0;
+  }
+  .streak {
+    color: var(--font-muted);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    padding: 5px 0px 0;
+  }
+  .stake {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+  }
+  .stack {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    color: var(--font-muted);
+    padding-bottom: 7px;
+  }
+  .heath {
+    font-size: 2.3rem;
+    line-height: 1.4;
+    font-weight: 500;
+    color: var(--font-main);
+    padding: 12px 0 0;
+  }
+  .crake {
+    font-size: 2.3rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--font-main);
+  }
+  .how-to {
+    display: block;
+  }
+  .rig-ss1 {
+    color: var(--font-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .riggi-ss1 {
+    color: var(--font-muted);
+    font-size: 1.7rem;
+    font-weight: 200;
+    text-align: center;
+    line-height: 1.3;
+    padding: 0 5px 12px 5px;
+  }
+  .newly-cars {
+    display: block;
+  }
+  .newly-cars2 {
+    display: block;
+  }
+  .newly-cars3 {
+    display: block;
+  }
+  .newly-cars4 {
+    display: block;
+  }
+  .cars-new3 {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .cars-newA {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .cars-newD {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .cars-now4 {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+  }
+  .cars-new-1 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 30rem;
+  }
+  .used-cars {
+    display: contents;
+    padding: 0 18px;
+    justify-content: space-between;
+    margin: 20px auto;
+  }
+  .used-car-1 {
+    display: block;
+  }
+  .used-car-2 {
+    display: block;
+  }
+  .used-car-3 {
+    display: block;
+  }
+  .used-car-4 {
+    display: block;
+  }
+  .used-car-C {
+    display: block;
+  }
+  .used-car-F {
+    display: block;
+  }
+  .used-car-I {
+    display: block;
+  }
+  .used-car-L {
+    display: block;
+  }
+  .cars-new1 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-new1 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .used-car-font {
+    color: var(--font-main);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 900;
+    padding: 15px 10px;
+  }
+  .use-car-fon {
+    color: var(--font-muted);
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+    padding: 9px 10px;
+  }
+  .use-car-pa {
+    color: var(--font-muted);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding: 5px 10px;
+  }
+  .cars-new2 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-new2 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-new3 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-new3 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-new4 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-new4 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-newA {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-newA > img {
+    background-color: var(--clr11);
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-newB {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-newB > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-newC {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-newC > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-newD {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-newD > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-now1 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-now1 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-now2 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-now2 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-now3 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-now3 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-now4 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-now4 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .cars-new-1 {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 328px;
+  }
+  .cars-new-1 > img {
+    border-radius: 16px 16px 0 0;
+    margin-bottom: 0.8rem;
+    object-fit: cover;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 24.8rem;
+  }
+  .used-car-A {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img {
+    background: url(static/img/U1.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-B {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img2 {
+    background: url(static/img/U2.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-C {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img3 {
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-D {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img4 {
+    background: url(static/img/u4.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-E {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img5 {
+    background: url(static/img/u5.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-F {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img6 {
+    background: url(static/img/u6.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-G {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img7 {
+    background: url(static/img/U7.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-H {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img8 {
+    background: url(static/img/U8.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-I {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img9 {
+    background: url(static/img/u9.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-J {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img10 {
+    background: url(static/img/u10.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-K {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img11 {
+    background: url(static/img/u11.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+  .used-car-L {
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 0 auto 1rem auto;
+    min-width: 255px;
+    padding-bottom: 1.5rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    border: 1px solid var(--border-color);
+    transition: box-shadow 0.3s, transform 0.3s;
+    max-width: 300px;
+  }
+  .used-car-img12 {
+    background: url(static/img/u12.jpg) no-repeat center / cover;
+    height: 25rem;
+    max-width: 52.4rem;
+    width: 100%;
+    min-width: 22rem;
+  }
+}
