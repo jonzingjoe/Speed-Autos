@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Speed Autos</title>
+    <link
+      rel="shortcut icon"
+      href="static/img/1-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link
+      rel="preload"
+      href="ATVFabriga-Regular.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <nav class="nav">
+        <a href="/index.html"> <div class="nav-logo"></div></a>
+        <!--  -->
+        <ul class="nav_links">
+          <li class="nav_link"><a href="vehicles.html"> Vehicles</a></li>
+          <li class="nav_link"><a href="carvalue.html"> Car Value</a></li>
+          <li class="nav_link"><a href="financing.html"> Car Reviews</a></li>
+          <li class="nav_link"><a href="about.html"> About</a></li>
+          <li class="nav_link"><a href="contact.html"> Contact</a></li>
+        </ul>
+        <!--  -->
+        <div class="mid">
+          <h2>
+            Speed <span style="color: #9fe6a0"><i>Autos</i></span>
+          </h2>
+        </div>
+        <!--  -->
+        <ul class="nav-right">
+          <li class="svg">
+            <svg
+              aria-hidden="true"
+              class="icon light"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M14 2C9.58905 2 6.00005 5.589 6.00005 10C6.00005 12.043 6.77005 13.91 8.03605 15.325L2.14905 21.145L2.85205 21.855L8.74705 16.028C10.2009 17.3007 12.0678 18.0015 14 18C18.411 18 22 14.411 22 10C22 5.589 18.411 2 14 2ZM14 17C10.14 17 7.00005 13.86 7.00005 10C7.00005 6.14 10.14 3 14 3C17.86 3 21 6.14 21 10C21 13.86 17.86 17 14 17Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </li>
+          <li class="svg">
+            <img
+              height="30px"
+              width="30px"
+              src="static/img/accaunt-removebg-preview.png"
+              alt="accaunt-removebg-preview"
+            />
+          </li>
+        </ul>
+        <!--  -->
+        <a href="#" class="nav__hamburger">
+          <span class="nav__hamburger__line"></span>
+          <span class="nav__hamburger__line"></span>
+          <span class="nav__hamburger__line"></span>
+        </a>
+      </nav>
+      <!--  -->
+      <div
+        id="menu-message"
+        style="text-align: center; font-size: 3rem; margin-top: 0"
+      ></div>
+      <!--  -->
+      <section id="contact" class="contact section">
+        <div class="container contact-inner">
+          <header class="section-head">
+            <h2>
+               <span class="accent30"> Have any car related questions</span>
+            </h2>
+            <p style="color: white;">Get in Touch.</p>
+          </header>
+
+          <form
+            class="form"
+            action="https://formspree.io/f/xrbyanqe"
+            method="POST"
+          >
+            <div class="grid form-grid">
+              <label>
+                <span style="color: #9fe6a0;">Name</span>
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full name"
+                  required
+                />
+              </label>
+              <label>
+                <span style="color: #9fe6a0;">Email</span>
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+              <label>
+                <span style="color: #9fe6a0;">Phone</span>
+                <input type="tel" name="phone" placeholder="+234" />
+              </label>
+            </div>
+                          <label>
+                <span style="color: #9fe6a0;">Bonus Tips</span>
+                <select name="goal">
+                  <option>Sales</option>
+                  <option>Service</option>
+                  <option>Test Drive</option>
+                </select>
+              </label>
+
+            <label class="full">
+              <span style="color: #9fe6a0;">Message box?</span>
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Your feedback on our services"
+              ></textarea>
+            </label>
+            <button class="btn btn--primary" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </section>
+      <!--  -->
+      <div class="footer">
+        <div class="foot1">
+          <h3 class="foot-head">
+            Speed <span style="color: #9fe6a0">Autos</span>
+          </h3>
+          <p class="foot-bod">
+            At Speed Auto, we’re committed to helping you find the perfect
+            vehicle. Whether you're looking to buy, lease, or simply need expert
+            automotive advice, our team is here to guide you every step of the
+            way. Quality, trust, and performance — that’s the Speed Auto
+            promise. <br />
+            © 2025 Speed Auto.
+          </p>
+          <div class="foot-icons">
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+          </div>
+        </div>
+        <!--  -->
+        <div class="foot2">
+          <h3 class="foot-head">Website Pages</h3>
+          <ul>
+            <li class="foot-link"><a href="vehicles.html"> Vehicles</a></li>
+            <li class="foot-link"><a href="carvalue.html"> Car Value</a></li>
+            <li class="foot-link"><a href="financing.html"> Car Review</a></li>
+            <li class="foot-link"><a href="about.html"> About</a></li>
+            <li class="foot-link"><a href="contact.html"> Contact</a></li>
+          </ul>
+        </div>
+        <!--  -->
+        <div class="foot3">
+          <h3 class="foot-head">Contact Us</h3>
+          <div class="contact-icon2">
+            <p><i class="fa-solid fa-phone"></i> +234 (813)-371-9818</p>
+            <p><i class="fa-solid fa-message"></i>hello@speedauto.co</p>
+            <p class="forgap"><i class="fa-solid fa-location-dot"></i>One</p>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <!--  -->
+      <script src="/script.js"></script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+      <script>
+        AOS.init();
+      </script>
+      <script
+        src="https://kit.fontawesome.com/b8ec88f068.js"
+        crossorigin="anonymous"
+      ></script>
+    </main>
+  </body>
+</html>

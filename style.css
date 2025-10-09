@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -50,13 +51,12 @@ ul {
   list-style: none;
 }
 .nav {
-  background: linear-gradient(
+  /* background: linear-gradient(
     to right,
     var(--clr3),
-    var(--clr4),
-    var(--clr7),
-    var(--clr8)
-  );
+    #114326
+  ); */
+  background-color: #3fe5843a;
   padding: 1rem 1.5rem 0 1.5rem;
   display: flex;
   width: 100%;
@@ -142,6 +142,47 @@ ul {
   background-color: rgba(0, 0, 0, 0.7);
   background-blend-mode: multiply;
   width: 100%;
+}
+.hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 0.7em 1.2em;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  max-width: 90%;
+  font-size: 5.5vw;
+  color: var(--font-accent);
+  z-index: 2;
+  margin: 0;
+  display: block;
+}
+.homeless {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.8em 2em;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.12);
+  cursor: pointer;
+  z-index: 3;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  outline: none;
+  display: inline-block;
+  text-align: center;
+}
+.homeless:hover {
+  background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
+  transform: translate(-50%, -52%) scale(1.04);
+  box-shadow: 0 4px 16px rgba(36, 45, 61, 0.18);
 }
 .r1 {
   padding: 2rem;
@@ -267,7 +308,7 @@ ul {
   margin: 3.9rem auto 2.5rem auto;
   padding: 0.9rem 2.2rem;
   background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
-  color: #fff;
+  color: #fff !important;
   font-size: 1.3rem;
   font-weight: 600;
   border: none;
@@ -275,6 +316,16 @@ ul {
   box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
   cursor: pointer;
   transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn > a {
+  color: var(--clr11);
+  display: block;
+  font-size: 1.3rem;
+}
+.btn1 > a {
+  color: var(--clr11);
+  display: block;
+  font-size: 1.3rem;
 }
 .btn1:hover {
   background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
@@ -294,6 +345,11 @@ ul {
   box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
   cursor: pointer;
   transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+.btn2 > a {
+  color: var(--clr11);
+  display: block;
+  font-size: 1.3rem;
 }
 .btn2:hover {
   background: linear-gradient(90deg, var(--clr8) 0%, var(--clr3) 100%);
@@ -697,8 +753,24 @@ ul {
 .quest1 > svg {
   color: var(--font-accent);
 }
-.quest1 > p {
+details {
+  list-style: none;
   font-size: 2rem;
+  cursor: pointer;
+}
+details::-webkit-details-marker {
+  display: none;
+}
+summary {
+  list-style: none;
+  cursor: pointer;
+}
+summary::-webkit-details-marker {
+  display: none;
+}
+.pointed {
+  padding-top: 10px;
+  font-size: 1.5rem;
 }
 .quest1:hover {
   background-color: var(--box-hover);
@@ -1682,13 +1754,13 @@ ul {
   border-radius: 16px;
   overflow: hidden;
   margin-bottom: 1rem;
-  min-width: 255px;
+  min-width: 200px;
   padding: 1.5rem 1rem;
   background-color: var(--box-bg-1);
   color: var(--font-main);
   border: 1px solid var(--border-color);
   transition: box-shadow 0.3s, transform 0.3s;
-  max-width: 270px;
+  max-width: 250px;
   position: absolute;
   top: 25px;
   left: 20px;
@@ -1730,11 +1802,11 @@ ul {
   text-align: center;
 }
 .car-v-h {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 700;
   color: var(--font-heading);
   margin: 5rem 0;
-  line-height: 1.2px;
+  line-height: 1.2;
   padding: 0 18px;
   text-align: center;
 }
@@ -1774,7 +1846,11 @@ ul {
 .car-guide-pic1 > img {
   position: inherit;
 }
-
+.dont-try {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 10px 15px;
+}
 .car-val-guide2 {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -2021,7 +2097,7 @@ ul {
   border: 1px solid var(--border-color);
   transition: box-shadow 0.3s, transform 0.3s;
   border-radius: 16px;
-  padding: 0 24px 0 0;
+  margin-bottom: 1rem;
 }
 .car-re-pic-1 {
   background: url(static/img/car-view9.jpg) no-repeat center / cover;
@@ -2331,7 +2407,6 @@ ul {
   font-weight: 500;
   line-height: 1.8;
   color: var(--font-heading);
-  /* padding: 7px 0 0; */
 }
 .car-meme {
   font-size: 1.4rem;
@@ -2369,7 +2444,286 @@ ul {
   margin: 0 20px;
   padding: 40px 0;
 }
+.car-about-second {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  gap: 5rem;
+  align-items: center;
+  justify-items: center;
+}
+.car-second-2 {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 10px 15px;
+}
+.car-second-1 {
+  max-width: 90rem;
+  min-width: 50rem;
+  /* width: 100%; */
+  height: 50rem;
+  background: url(static/img/car-val1.avif) no-repeat center / cover;
+}
+.car-2-font {
+  font-size: 5rem;
+  padding-bottom: 10px;
+  color: var(--font-heading);
+  padding-top: 20px;
+}
+.font-on {
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  color: var(--font-main);
+  padding-left: 40px;
+}
+.abt-bttn {
+  display: flex;
+  margin-top: 18px;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  gap: 10px;
+}
+.car-about-third {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  gap: 2rem;
+  align-items: center;
+  justify-items: center;
+}
+.car-third-1 {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 30px 15px;
+}
+.car-third-2 > img {
+  max-width: 90rem;
+  min-width: 70rem;
+  /* width: 60rem; */
+  height: 60rem;
+}
+.abt-bttn1 {
+  display: flex;
+  margin-top: 110px;
+  padding: 0.9rem 2.2rem;
+  background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+  gap: 10px;
+}
+.car-fourth-1 {
+  max-width: 90rem;
+  min-width: 50rem;
+  /* width: 60rem; */
+  height: 40rem;
+  background: url(static/img/abt2.jpg) no-repeat center / cover;
+}
+.car-fourth-2 {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 10px 15px;
+}
+.car-about-fourth {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0 20px;
+  margin-top: 15rem;
+  margin-bottom: 5rem;
+  gap: 7rem;
+  align-items: center;
+  justify-items: center;
+}
+.forth {
+  font-size: 5rem;
+  padding-bottom: 10px;
+  padding-top: 50px;
+  color: var(--font-heading);
+}
+.fornth {
+  padding-left: 55px;
+}
+.hunch {
+  font-size: 1.8rem;
+  padding-bottom: 10px;
+  color: var(--font-main);
+}
+.poison {
+  font-size: 5rem;
+  line-height: 100%;
+  color: var(--font-heading);
+  margin: 0 20px;
+  padding: 40px 0;
+}
 /* About Ends */
+
+/* Leasing starts now */
+.head-lease {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  margin: 8rem 0 0;
+  line-height: 1.3px;
+  padding: 0 18px 16px 18px;
+  text-align: center;
+}
+.head-second-leas {
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--font-heading);
+  margin: 5rem 0;
+  padding: 0 18px 16px 18px;
+  text-align: center;
+}
+.shintin {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--font-heading);
+  line-height: 1.3px;
+  padding: 0 18px 16px 18px;
+}
+.leas-sect {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.leas-sect-1 {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 38rem;
+}
+.septure {
+  font-size: 3.2rem;
+  font-weight: 500;
+  color: var(--font-main);
+}
+.star-trek {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--font-main);
+}
+#hell {
+  list-style: disc;
+  padding-left: 12px;
+}
+.leas-hell {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--font-main);
+  padding-left: 4px;
+  margin-bottom: 8px;
+}
+.pinct {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--font-muain);
+}
+.leas-sect-2 {
+  overflow: hidden;
+  color: var(--font-main);
+  padding: 30px 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  margin: 0 auto;
+  height: 310px;
+  max-height: 310px;
+  width: 5000px;
+  max-width: 500px;
+}
+/* leasing ends here also */
+/* Contact starts */
+.section-head {
+  font-size: 1.6rem;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 2rem;
+  padding-top: 8px;
+}
+
+.contact-inner {
+  display: grid;
+  gap: 2.8rem;
+  padding: 7.2rem 8rem;
+  @media (max-width: 1153px) {
+    padding: 7.2rem 3rem;
+  }
+}
+.form {
+  background: var(--surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius);
+  padding: 2.2rem;
+  box-shadow: var(--shadow);
+}
+.form-grid {
+  grid-template-columns: repeat(12, 1fr);
+}
+.form-grid > label {
+  grid-column: span 12;
+}
+@media (min-width: 720px) {
+  .form-grid > label {
+    grid-column: span 6;
+  }
+}
+.hound {
+  color: var(--font-heading);
+}
+label span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 1.5rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: #0e0e11;
+  color: #fff;
+  outline: none;
+}
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--brand);
+}
+.full {
+  display: block;
+  margin: 1.4rem 0;
+}
+/* Contact ends */
 
 @media (max-width: 1165px) {
   html {
@@ -2610,6 +2964,153 @@ ul {
     line-height: 1.4;
     font-weight: 600;
     color: var(--font-main);
+  }
+  .car-val-art {
+    display: block;
+    padding: 0 18px;
+    margin: 20px auto;
+    gap: 10px;
+  }
+  .car-pic-font {
+    color: var(--font-main);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 12px;
+  }
+  .reviewing {
+    display: block;
+    padding: 0 18px;
+    gap: 1.3rem;
+  }
+  .car-re-pic-1 {
+    background: url(static/img/car-view9.jpg) no-repeat center / cover;
+    height: 20.6rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-2 {
+    background: url(static/img/car-view2.jpg) no-repeat center / cover;
+    height: 22.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-3 {
+    background: url(static/img/car-view3.jpg) no-repeat center / cover;
+    height: 22.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-5 {
+    background: url(static/img/car-view1.jpg) no-repeat center / cover;
+    height: 20.6rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-7 {
+    background: url(static/img/car-view5.jpg) no-repeat center / cover;
+    height: 22.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-8 {
+    background: url(static/img/car-view8.jpg) no-repeat center / cover;
+    height: 20.6rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-9 {
+    background: url(static/img/car-view7.jpg) no-repeat center / cover;
+    height: 20.6rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-11 {
+    background: url(static/img/car-view12.jpg) no-repeat center / cover;
+    height: 20.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-12 {
+    background: url(static/img/car-view11.jpg) no-repeat center / cover;
+    height: 20.6rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-rev-iew-2 {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background-color: var(--box-bg-1);
+    color: var(--font-main);
+    transition: box-shadow 0.3s, transform 0.3s;
+    padding: 0 10px 0 2.4rem;
+    min-width: 31rem;
+    width: 100%;
+  }
+  .car-pop {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: var(--font-heading);
+    padding: 15px 0;
+  }
+  .car-sip {
+    font-size: 1.8rem;
+    padding: 13px 0;
+    font-weight: 500;
+    color: var(--font-muted);
+  }
+  .car-meet {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--font-heading);
+    padding: 15px 0;
+    margin-top: 9rem;
+  }
+  .car-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: space-between;
+    margin: 20px auto;
+    align-items: center;
+    justify-items: center;
+  }
+  .car-about-second {
+    display: block;
+    margin: 5rem auto;
+  }
+  .car-about-third {
+    display: block;
+    margin: 5rem auto;
+  }
+  .car-about-fourth {
+    display: block;
+    margin: 5rem auto;
+  }
+  .car-second-1 {
+    max-width: 90rem;
+    min-width: 68rem;
+    /* width: 100%; */
+    height: 50rem;
+    background: url(static/img/car-val1.avif) no-repeat center / cover;
+  }
+  .poison {
+    font-size: 4rem;
+    line-height: 100%;
+    color: var(--font-heading);
+    margin: 0 20px;
+    padding: 40px 0;
   }
 }
 
@@ -3227,6 +3728,201 @@ ul {
     width: 100%;
     min-width: 24rem;
   }
+  .car-val-aside {
+    width: 230px;
+  }
+  .car-val-head {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    padding: 12px 0px;
+    text-align: center;
+  }
+  .car-val-write {
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 0px 0px 12px;
+    text-align: center;
+  }
+  .car-val-but {
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    gap: 10px;
+  }
+  .car-val-fun {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 0px 0px 12px;
+    text-align: center;
+  }
+  .car-v-h {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 5rem 0;
+    line-height: 1.2px;
+    padding: 0 18px;
+    text-align: center;
+  }
+  .car-val-p {
+    color: var(--font-main);
+    font-size: 1.6rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    padding: 12px 5px;
+  }
+  .car-know-h {
+    color: var(--font-main);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    padding: 25px 15px 20px 12px;
+  }
+  .car-know-pr {
+    color: var(--font-main);
+    font-size: 1.7rem;
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 0 12px 15px 12px;
+  }
+  .car-v-hont {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 2rem 0 0;
+    line-height: 1.3px;
+    padding: 0 16px 12px 16px;
+    text-align: center;
+  }
+  .car-val-hint {
+    color: var(--font-main);
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-align: center;
+    padding: 5px 10px 10px 10px;
+    margin: 0 auto;
+  }
+  .car-re-pic-1 {
+    background: url(static/img/car-view9.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-2 {
+    background: url(static/img/car-view2.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-3 {
+    background: url(static/img/car-view3.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-4 {
+    background: url(static/img/car-view6.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-5 {
+    background: url(static/img/car-view1.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-6 {
+    background: url(static/img/car-view4.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-7 {
+    background: url(static/img/car-view5.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-8 {
+    background: url(static/img/car-view8.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-9 {
+    background: url(static/img/car-view7.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-10 {
+    background: url(static/img/car-view10.jpg) no-repeat center / cover;
+    height: 22.8rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-11 {
+    background: url(static/img/car-view12.jpg) no-repeat center / cover;
+    height: 22.8rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-12 {
+    background: url(static/img/car-view11.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-second-1 {
+    max-width: 90rem;
+    display: none;
+    min-width: 40rem;
+    /* width: 100%; */
+    height: 50rem;
+    background: url(static/img/car-val1.avif) no-repeat center / cover;
+  }
+  .car-third-2 > img {
+    max-width: 90rem;
+    min-width: 20rem;
+    /* width: 60rem; */
+    height: 60rem;
+    display: none;
+  }
+  .car-about-fourth {
+    margin-top: 0;
+  }
+  .car-fourth-1 {
+    background: none;
+    display: none;
+  }
 }
 
 @media (max-width: 650px) {
@@ -3563,6 +4259,202 @@ ul {
     max-width: 55rem;
     width: 100%;
     min-width: 24rem;
+  }
+  .car-val-first {
+    background: none;
+    position: relative;
+  }
+  .car-val-aside {
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 220px;
+  }
+  .car-val-head {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 1.3;
+    padding: 15px 0px;
+    text-align: center;
+  }
+  .car-val-write {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 0px 0px 12px;
+    text-align: center;
+  }
+  .car-val-but {
+    display: flex;
+    margin: 1rem auto 2rem auto;
+    padding: 0.9rem 2.2rem;
+    background: linear-gradient(90deg, var(--clr3) 0%, var(--clr8) 100%);
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 8px rgba(36, 45, 61, 0.1);
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    gap: 10px;
+  }
+  .car-val-fun {
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.3;
+    padding: 0px 0px 12px;
+    text-align: center;
+  }
+  .car-value-tip {
+    display: block;
+    padding: 0 18px;
+    gap: 1.3rem;
+    margin: 0 auto;
+  }
+  .car-val-p {
+    color: var(--font-main);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px 8px;
+  }
+  .car-val-under {
+    color: var(--font-main);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    padding-bottom: 12px;
+  }
+  .under-quest {
+    color: var(--font-main);
+    font-size: 2.2rem;
+    font-weight: 600;
+    padding-top: 7px;
+  }
+  .car-val-fact2 {
+    margin-top: 30px;
+  }
+  .car-re-pic-1 {
+    background: url(static/img/car-view9.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-2 {
+    background: url(static/img/car-view2.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-3 {
+    background: url(static/img/car-view3.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-4 {
+    background: url(static/img/car-view6.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-5 {
+    background: url(static/img/car-view1.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-6 {
+    background: url(static/img/car-view4.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-7 {
+    background: url(static/img/car-view5.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-8 {
+    background: url(static/img/car-view8.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-9 {
+    background: url(static/img/car-view7.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-10 {
+    background: url(static/img/car-view10.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-11 {
+    background: url(static/img/car-view12.jpg) no-repeat center / cover;
+    height: 30.3rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-re-pic-12 {
+    background: url(static/img/car-view11.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 30rem;
+    min-width: 29rem;
+    width: 100%;
+  }
+  .car-mem-font {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.8;
+    color: var(--font-heading);
+  }
+  .car-meme {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--font-main);
+  }
+  .car-pop {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--font-heading);
+    padding: 15px 0;
+  }
+  .car-sip {
+    font-size: 2.2rem;
+    padding: 13px 0;
+    font-weight: 500;
+    color: var(--font-muted);
+  }
+  .font-on {
+    font-size: 2.3rem;
+    padding-bottom: 10px;
+    color: var(--font-main);
+    padding-left: 40px;
+  }
+  .hunch {
+    font-size: 2.3rem;
+    padding-bottom: 10px;
+    color: var(--font-main);
   }
 }
 
@@ -4589,5 +5481,180 @@ ul {
     max-width: 52.4rem;
     width: 100%;
     min-width: 22rem;
+  }
+  .car-v-h {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--font-heading);
+    line-height: 1.2px;
+    text-align: center;
+  }
+  .head-review {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    margin: 8rem 0 0;
+    line-height: 1.3px;
+    padding: 0 18px 16px 18px;
+    text-align: center;
+  }
+  .fintin {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: var(--font-heading);
+    line-height: 1.3px;
+    padding: 0 18px 16px 18px;
+  }
+  .car-re-view1 {
+    display: block;
+  }
+  .car-re-view2 {
+    display: block;
+  }
+  .car-re-view3 {
+    display: block;
+  }
+  .car-re-view4 {
+    display: block;
+  }
+  .car-re-view5 {
+    display: block;
+  }
+  .car-re-view6 {
+    display: block;
+  }
+  .car-re-view7 {
+    display: block;
+  }
+  .car-re-view8 {
+    display: block;
+  }
+  .car-re-view9 {
+    display: block;
+  }
+  .car-re-view10 {
+    display: block;
+  }
+  .car-re-view11 {
+    display: block;
+  }
+  .car-re-view12 {
+    display: block;
+  }
+  .car-re-pic-1 {
+    background: url(static/img/car-view9.jpg) no-repeat center / cover;
+    height: 28rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-2 {
+    background: url(static/img/car-view2.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-3 {
+    background: url(static/img/car-view3.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-4 {
+    background: url(static/img/car-view6.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-5 {
+    background: url(static/img/car-view1.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-6 {
+    background: url(static/img/car-view4.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-7 {
+    background: url(static/img/car-view5.jpg) no-repeat center / cover;
+    height: 24.4rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-8 {
+    background: url(static/img/car-view8.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-9 {
+    background: url(static/img/car-view7.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-10 {
+    background: url(static/img/car-view10.jpg) no-repeat center / cover;
+    height: 22.8rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-11 {
+    background: url(static/img/car-view12.jpg) no-repeat center / cover;
+    height: 22.8rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-re-pic-12 {
+    background: url(static/img/car-view11.jpg) no-repeat center / cover;
+    height: 23rem;
+    max-width: 90rem;
+    min-width: 32rem;
+    width: 100%;
+  }
+  .car-team-mem1 {
+    display: block;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .car-team-mem2 {
+    display: block;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .car-team-mem3 {
+    display: block;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .car-team-mem4 {
+    display: block;
+    gap: 6px;
+    margin-bottom: 16px;
+  }
+  .car-pop {
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: var(--font-heading);
+    padding: 15px 0;
+  }
+  .car-sip {
+    font-size: 2.5rem;
+    padding: 13px 0;
+    font-weight: 500;
+    color: var(--font-muted);
   }
 }
