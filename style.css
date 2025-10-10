@@ -55,7 +55,7 @@ ul {
     var(--clr3),
     #114326
   ); */
-  background-color: #0925143a;
+  background-color: #043b2041;
   padding: 1rem 1.5rem 0 1.5rem;
   display: flex;
   width: 100%;
@@ -4570,13 +4570,13 @@ iframe {
     gap: 0.7rem;
     align-items: stretch;
   }
-  .btn {
+  .btn > a {
     font-size: 2rem;
   }
-  .btn1 {
+  .btn1 > a {
     font-size: 2rem;
   }
-  .brn2 {
+  .brn2 > a{
     font-size: 2rem;
   }
   .lest > img {
@@ -4675,6 +4675,9 @@ iframe {
     text-align: center;
     line-height: 1.3;
     padding: 0 5px 12px 5px;
+  }
+  .stud > a {
+    font-size: 2.3rem;
   }
   .West {
     font-size: 3rem;
@@ -5866,6 +5869,11 @@ iframe {
     color: var(--font-main);
     padding-left: 40px;
   }
+    .hunch {
+    font-size: 2.8rem;
+    padding-bottom: 10px;
+    color: var(--font-main);
+  }
   .septure {
     font-size: 4.5rem;
     font-weight: 500;
@@ -5892,4 +5900,13 @@ iframe {
     font-weight: 500;
     color: var(--font-muain);
   }
+  .cart-fonts1 {
+  font-size: 1.9rem;
+  line-height: 24px;
+  font-weight: 500;
+  color: var(--font-main);
+}
+.btn--primary {
+  font-size: 2rem;
+}
 }
