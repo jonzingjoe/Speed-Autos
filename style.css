@@ -4555,7 +4555,7 @@ iframe {
     padding: 10px 8px;
   }
   .heed {
-    font-size: 2.6rem;
+    font-size: 3rem;
     font-weight: 700;
     margin: 4rem 0;
     text-align: center;
@@ -4576,7 +4576,7 @@ iframe {
   .btn1 > a {
     font-size: 2rem;
   }
-  .brn2 > a{
+  .btn2 > a{
     font-size: 2rem;
   }
   .lest > img {
@@ -5880,8 +5880,8 @@ iframe {
     color: var(--font-main);
   }
   .star-trek {
-    font-size: 3.5rem;
-    font-weight: 500;
+    font-size: 3.1rem;
+    font-weight: 400;
     color: var(--font-main);
   }
   #hell {
